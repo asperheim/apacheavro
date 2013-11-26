@@ -1,0 +1,44 @@
+{   "protocol": "BLOBTransfer",
+    "namespace": "Avro.AvroTestMaven",
+
+    "types": [
+        {
+            "type": "record",
+            "name": "AndersBlob",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "type": [
+                        "int",
+                        "null"
+                    ]
+                },
+                {
+                    "name": "bytes",
+                    "type": [
+                        {
+                            "type": "array",
+                            "items": "bytes"
+                        },
+                        "null"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messages": {
+        "send": {
+            "request": [
+                {
+                    "name": "andersBlob",
+                    "type": "AndersBlob"
+                }
+            ],
+            "response": "string"
+        }
+    }
+}
